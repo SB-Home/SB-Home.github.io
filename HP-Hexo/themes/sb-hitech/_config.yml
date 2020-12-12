@@ -10,11 +10,12 @@ menu:
   Home: / || fas fa-home
   About: /about/ || fas fa-link
   Global||fas fa-list: 
-    - China || https://sunshubin.github.io/ || fas fa-link
+    - China || https://sunshubin-china.github.io/ || fas fa-link
     - Japan || https://sunshubin-japan.github.io/ || fas fa-link
     - America || https://sunshubin-america.github.io/ || fas fa-link
     - Korea || https://sunshubin-korea.github.io/ || fas fa-link
     - Vietnam || https://sunshubin-Vietnam.github.io/ || fas fa-link
+    - Philippines || https://sunshubin-Philippines.github.io/ || fas fa-link
   Research||fas fa-list: 
     - EdTech || https://sb-edtech.github.io/ || fas fa-link
     - HRTech || https://sb-hrtech.github.io/ || fas fa-link
