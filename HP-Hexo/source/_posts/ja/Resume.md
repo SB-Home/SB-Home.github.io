@@ -12,31 +12,59 @@ tags:
 abbrlink: 38496
 date: 2020-06-30 18:13:50
 updated: 2021-01-01 18:58:58
----
-　　
-# 個人履歴
+---　　
 
-**提示**  
+# お知らせ  
+- 私は　東京で安定な就職することが欲しいです。
+- 私は　IT派遣業界の法律違反の事件と一切な関係がありません。  
+- 派遣業界の名誉毀損などの嘘・噂について　必要な場合　政府関係部署、警察に告発します。自愛してください。
+
+
+# 読み方
 - このページの書類は　ソーシャル繋がりのために　公開しました。 
 - このページの書類は 一部個人の興味・関心・将来みたい仕事の内容を記入しました。汎用版なので　応募職位の業務知識と能力について　面談・面接の場合　詳しい説明します。 
-- このページは常に1ヶ月ほど　更新しています。
+- このページの内容は一部編集中内容があり、常に1ヶ月ほど　更新しています。
 - **太い字書類**は面接参考用なバージョンです。メール「sunshubin@outlook.jp」で連絡して　正式な最新書類を送付いたします。 
-  
-|Update|Resume|PR|Strong|Experience|Skill|PPT|Video|Version
----|:---:|:--:|:---:|:---:|:---:|:---:|---|:---:
-2022/01/01|---|---|---|---|---|---|---|---
-2021/10/01|---|---|---|---|---|---|---|ビデオ公開予定
-2021/07/01|---|---|---|---|<a href="./Resume_Shubin_Sun_JA_スキルシート_20201201.pdf" title="スキルチェックシートをダウンロード"  target="_blank">スキルシート</a>|---|---|スキルシート公開予定
-2021/04/01|---|---|---|---|---|---|---|∝、PPT公開予定
-2021/03/01|---|---|---|---|---|---|---|---
-2021/02/01|---|---|---|---|---|---|---|---
-**2021/01/01**|<a href="./Resume_Shubin_Sun_JA_履歴書_20210101.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_PR_20210101.pdf" title="PRをダウンロード"  target="_blank">PR</a>|<a href="./Resume_Shubin_Sun_JA_強み_20210101.pdf" title="強みをダウンロード"  target="_blank">強み</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20210101.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a> |---|---|---|**阝、4.12.16.116、PRと経歴書を更新**
-2020/12/01|<a href="./Resume_Shubin_Sun_JA_履歴書_20201201.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_PR_20201201.pdf" title="PRをダウンロード"  target="_blank">PR</a>|<a href="./Resume_Shubin_Sun_JA_強み_20201201.pdf" title="強みをダウンロード"  target="_blank">強み</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20201201.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a> |---|---|---|4.11.16.113
-2020/11/01|<a href="./Resume_Shubin_Sun_JA_履歴書_20201101.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_PR_20201101.pdf" title="PRをダウンロード"  target="_blank">PR</a>|<a href="./Resume_Shubin_Sun_JA_強み_20201101.pdf" title="強みをダウンロード"  target="_blank">強み</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20201101.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a> |---|---|---|4.11.10.106、強み更新
-2020/10/01|<a href="./Resume_Shubin_Sun_JA_履歴書_20201001.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_PR_20201001.pdf" title="PRをダウンロード"  target="_blank">PR</a>|<a href="./Resume_Shubin_Sun_JA_強み_20201001.pdf" title="強みをダウンロード"  target="_blank">強み</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20201001.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a> |---|---|---|4.9.10.101、強みを追加
-2020/09/01|<a href="./Resume_Shubin_Sun_JA_履歴書_20200901.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_PR_20200901.pdf" title="PRをダウンロード"  target="_blank">PR</a>|---|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20200901.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a>|---|---|---|4.3.5.50
----|---|---|---|---|---|---|---|---
----|---|---|---|---|---|---|---|---
-    
-   　
+
+
+# 履歴書・業務経歴書  
+
+|Update|Resume|Experience|PPT|Video|Version|Memo
+---|:---:|:--:|:---:|:---:|:---:|:---
+2022/01/01|---|---|---|---|---|---
+2021/10/01|---|---|------|---|---|---
+2021/07/01|---|---|---|---|---|ビデオ公開予定
+2021/04/01|---|---|---|---|∝|PPT公開予定
+2021/03/01|---|---|---|---|---|研修内容更新待ち待ち
+2021/02/01|---|---|---|---|---|---
+**2021/01/01**|<a href="./Resume_Shubin_Sun_JA_履歴書_20210101_4.13.16.120.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20210101_4.13.16.120.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a>|---|---|**4.13.16.120**|**阝強みソリューション化**
+2020/12/01|<a href="./Resume_Shubin_Sun_JA_履歴書_20201201_4.11.16.113.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20201201_4.11.16.113.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a> |---|---|4.11.16.113|強みグループ化
+2020/11/01|<a href="./Resume_Shubin_Sun_JA_履歴書_20201101_4.11.10.106.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20201101_4.11.10.106.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a> |---|---|4.11.10.106|強み更新
+2020/10/01|<a href="./Resume_Shubin_Sun_JA_履歴書_20201001_4.9.10.101.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20201001_4.9.10.101.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a> |---|---|4.9.10.101|強み追加
+2020/09/01|<a href="./Resume_Shubin_Sun_JA_履歴書_20200901_4.3.5.50.pdf" title="履歴書をダウンロード"  target="_blank">履歴書</a>|<a href="./Resume_Shubin_Sun_JA_職務経歴書_20200901_4.3.5.50.pdf" title="職務経歴書をダウンロード"  target="_blank">職務経歴書</a>|---|---|4.3.5.50|---
+---|---|---|---|---|---|---
+
+
+# 提案文書サンプル（事業ビジネスプラン）
+
+整理中
+
+##　人資バンプ（仮プロジェクト）
+
+
+##　ケアクロードサービス（仮プロジェクト）
+
+
+# キャリアプラン・スキルシート
+
+Career Plan|Skill|Version|Memo
+---|:---:|:--:|:---
+---|---|---|--- 
+---|---|---|--- 
+---|<a href="./Resume_Shubin_Sun_JA_スキルシート_20210101.pdf" title="スキルチェックシートをダウンロード"  target="_blank">スキルシート</a>|---|編集中
+---|---|---|--- 
+
+　　
+# バージョンについて  
+
 Version：【フォーマット変更】.【内容変更】.【ミス修正】.【ファイル保存回数】
