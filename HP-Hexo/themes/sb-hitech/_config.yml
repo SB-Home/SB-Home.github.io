@@ -8,7 +8,7 @@
 
 menu:
   Home: / || fas fa-home
-  About: /about/ || fas fa-link
+  About: https://sunshubin-china.github.io/about/ || fas fa-link
   Global||fas fa-list: 
     - China || https://sunshubin-china.github.io/ || fas fa-link
     - Japan || https://sunshubin-japan.github.io/ || fas fa-link
@@ -26,12 +26,12 @@ menu:
     - Experience Training || https://experience-training.github.io/ || fas fa-link  
     - Book Fair || https://Book-Fair.github.io/ || fas fa-link  
   Product||fas fa-list:
-    - HRMS || https://www.sb-hrms.com/ || fas fa-link  
-    - HRBP || https://www.sb-hrbp.com/ || fas fa-link  
+    - Human Resource Management System || http://www.sb-hrms.com/ || fas fa-link  
+    - Human Resource Business Partner || http://www.sb-hrbp.com/ || fas fa-link  
   Resources||fas fa-list:
-    - Music || /music/ || fas fa-music
-    - Movie || /movies/ || fas fa-video
-    - Link || /link/ || fas fa-link
+    - Music || https://sb-hitech.github.io/music/ || fas fa-music
+    - Movie || https://sb-hitech.github.io/movies/ || fas fa-video
+    - Link || https://sb-hitech.github.io/link/ || fas fa-link
   Categories: /categories/ || fas fa-folder-open
   Tags: /tags/ || fas fa-tags
   Archives: /archives/ || fas fa-archive
@@ -642,7 +642,7 @@ aside:
       link: https://github.com/sunshubin
   card_announcement:
     enable: true
-    content: 站点资源和使用方法介绍，请务必点击顶部菜单About进行详细了解!<br>----更新于2020年9月1日
+    content: 本个人博客以中国及中国相关学习、生活、社交、工作等内容为主，点击顶部菜单可浏览其他国家内容的博客。<br>----更新于2021年1月1日
   card_recent_post:
     enable: true
     limit: 10 # if set 0 will show all
