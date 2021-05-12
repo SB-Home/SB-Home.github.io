@@ -1,4 +1,4 @@
-﻿Update:2021/5/4
+﻿Update:2021/5/8
 <br>
 # Interactive
 ## Issues
@@ -47,6 +47,7 @@ Content | Visibility | Access | WEB URL | Repositories URL
 计算机科学与信息工程 | Public | Guest | https://sbgbts-csie.github.io |  | 
 语言沟通 | Public | Guest | https://sbgbts-lc.github.io |  | 
 bypass | Public | Guest | https://SBClub.github.io |  | 
+bypass | Public | Guest | https://Community-Cloud.github.io |  | 
 bypass | Public | Guest | https://HRMS-Cloud.github.io |  | 
 bypass | Public | Guest | https://HRBP-Cloud.github.io |  | 
 EdTech | Public | Guest | https://EdTech2030.github.io |  | 
@@ -55,22 +56,25 @@ bypass | Public | Guest | https://QA-Cloud.github.io |  |
 《产品经理》课程体系 | Public | Guest | https://Product-Design.github.io |  | 
 《项目经理》课程体系 | Public | Guest | https://Project-Operation.github.io |  | 
 bypass | Public | Guest | https://Communication-Cloud.github.io |  | 
-bypass | Public | Guest | https://Moment-of-Truth-ETP.github.io |  | 
-bypass | Public | Guest | https://Community-Cloud.github.io |  | 
-物联网 | Public | Guest | https://AIoT-Cloud.github.io |  | 
-人工智能辅助决策系统 | Public | Guest | https://IDSS-Cloud.github.io |  | 
-大数据 | Public | Guest | https://Bigdata-ETP.github.io |  | 
-程序设计语言原理与实践 | Public | Guest | https://Program-Design-Language.github.io |  | 
-bypass | Public | Guest | https://English-Cloud.github.io |  | 
-bypass | Public | Guest | https://Chinese-Cloud.github.io |  | 
-bypass | Public | Guest | https://French-Cloud.github.io |  | 
-bypass | Public | Guest | https://Russian-Cloud.github.io |  | 
-bypass | Public | Guest | https://Arabic-Cloud.github.io |  | 
-bypass | Public | Guest | https://Spanish-Cloud.github.io |  | 
-bypass | Public | Guest | https://Japanese-Cloud.github.io |  | 
-bypass | Public | Guest | https://Korean-Cloud.github.io |  | 
-bypass | Public | Guest | https://Vietnamese-Cloud .github.io |  | 
+bypass | Public | Guest | https://SBB-MoT.github.io |  | 
+物联网 | Public | Guest | https://SBT-AIoT.github.io |  | 
+人工智能辅助决策系统 | Public | Guest | https://SBT-IDSS.github.io |  | 
+大数据 | Public | Guest | https://SBT-Bigdata.github.io |  | 
+程序设计语言原理与实践 | Public | Guest | https://SBT-Programming.github.io |  | 
+bypass | Public | Guest | https://SBL-English.github.io |  | 
+bypass | Public | Guest | https://SBL-Chinese.github.io |  | 
+bypass | Public | Guest | https://SBL-French.github.io |  | 
+bypass | Public | Guest | https://SBL-Russian.github.io |  | 
+bypass | Public | Guest | https://SBL-Arabic.github.io |  | 
+bypass | Public | Guest | https://SBL-Spanish.github.io |  | 
+bypass | Public | Guest | https://SBL-Japanese.github.io |  | 
+bypass | Public | Guest | https://SBL-Korean.github.io |  | 
+bypass | Public | Guest | https://SBL-Vietnamese.github.io |  | 
 bypass | Public | Guest | https://Offer-Global.github.io |  | 
+bypass | Public | Guest | https://Offer-Asia.github.io |  | 
+bypass | Public | Guest | https://Offer-Japan.github.io |  | 
+bypass | Public | Guest | https://Offer-China.github.io |  | 
+bypass | Public | Guest | https://Offer-Fair.github.io |  | 
 bypass | Public | Guest | https://SB-Dict.github.io |  | 
 bypass | Public | Guest | https://Certificate-Cloud.github.io |  | 
 bypass | Public | Guest | https://Code-Fair.github.io |  | 
@@ -155,7 +159,7 @@ bypass | Public | Guest |  | https://github.com/SB-Lib/Books |
 <br>
 
 
-合计共133个资料库。 
+合计共137个资料库。 
 资料库超过1GB将进行调整，并发布新版列表，请留意页头更新日期。 资料库调整期间，可能无法使用！ 
 本页面由RPA软件，或VB Script自动做成并发布，未经人工预览测试，可能无法正常显示，敬请谅解。  
 本页面Bub报告：https://github.com/SBGIC/SBGIC.github.io/issues  
