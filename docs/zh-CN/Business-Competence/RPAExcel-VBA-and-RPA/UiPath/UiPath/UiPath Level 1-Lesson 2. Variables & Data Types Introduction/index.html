@@ -1,0 +1,467 @@
+<!DOCTYPE html><html lang="[&quot;en&quot;,&quot;zh-CN&quot;,&quot;ja&quot;,&quot;kr&quot;,&quot;vn&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>分类: Software | Sun Shubin(Memoirs)</title><meta name="keywords" content="UiPath Level 1教程"><meta name="author" content="Shubin Sun,sunshubin@outlook.jp"><meta name="copyright" content="Shubin Sun"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="学习大纲    界面布局    添加活动 (Activities)    使用变量    使用流程图 (Flowcharts) 或序列 (Sequences)      界面布局     Ribbon    Activities    Workflow Designer    Properties      FlowChart和Sequence     Sequence适用于需要执行几个连续动作的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UiPath Level 1-Lesson 2. Variables &amp; Data Types Introduction">
+<meta property="og:url" content="https://sunshubin.github.io/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath%20Level%201-Lesson%202.%20Variables%20&%20Data%20Types%20Introduction/index.html">
+<meta property="og:site_name" content="Sun Shubin(Memoirs)">
+<meta property="og:description" content="学习大纲    界面布局    添加活动 (Activities)    使用变量    使用流程图 (Flowcharts) 或序列 (Sequences)      界面布局     Ribbon    Activities    Workflow Designer    Properties      FlowChart和Sequence     Sequence适用于需要执行几个连续动作的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sunshubin.github.io/assets/img/top/3.jpg">
+<meta property="article:published_time" content="2020-08-13T09:18:58.000Z">
+<meta property="article:modified_time" content="2020-07-18T09:58:58.000Z">
+<meta property="article:author" content="Shubin Sun">
+<meta property="article:tag" content="UiPath Level 1教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sunshubin.github.io/assets/img/top/3.jpg"><link rel="shortcut icon" href="/assets/img/favicon.jpg"><link rel="canonical" href="https://sunshubin.github.io/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath%20Level%201-Lesson%202.%20Variables%20&amp;%20Data%20Types%20Introduction/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":100,"languages":{"author":"Author: Shubin Sun","link":"Link: ","source":"Source: Sun Shubin(Memoirs)","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2020-07-18 18:58:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/assets/img/Portraits.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">69</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">41</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">22</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> About</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/about/"><i class="fa-fw fas fa-link"></i><span> About</span></a></li><li><a class="site-page" href="/policy/"><i class="fa-fw fas fa-link"></i><span> Policy</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Global News</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/america/"><i class="fa-fw fas fa-folder-open"></i><span> America</span></a></li><li><a class="site-page" href="/categories/china/"><i class="fa-fw fas fa-folder-open"></i><span> China</span></a></li><li><a class="site-page" href="/categories/japan/"><i class="fa-fw fas fa-folder-open"></i><span> Japan</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Publication</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/salesforce/"><i class="fa-fw fas fa-folder-open"></i><span> Salesforce从入门到项目实践</span></a></li><li><a class="site-page" href="/categories/rpa/"><i class="fa-fw fas fa-folder-open"></i><span> RPA从入门到项目实践</span></a></li><li><a class="site-page" href="/categories/pjm/"><i class="fa-fw fas fa-folder-open"></i><span> 项目管理从入门到项目实践</span></a></li><li><a class="site-page" href="/categories/pdm/"><i class="fa-fw fas fa-folder-open"></i><span> 产品经理从入门到项目实践</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Service</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/business-consulting/"><i class="fa-fw fas fa-folder-open"></i><span> Business Consulting</span></a></li><li><a class="site-page" href="/categories/career-consulting/"><i class="fa-fw fas fa-folder-open"></i><span> Career Consulting</span></a></li><li><a class="site-page" href="/experience-training/"><i class="fa-fw fas fa-folder-open"></i><span> Experience Training</span></a></li><li><a class="site-page" href="/./"><i class="fa-fw fas fa-link"></i><span> …………</span></a></li><li><a class="site-page" href="/categories/Business-Map/"><i class="fa-fw fas fa-folder-open"></i><span> Business map</span></a></li><li><a class="site-page" href="/categories/Healthcare/"><i class="fa-fw fas fa-folder-open"></i><span> Healthcare</span></a></li><li><a class="site-page" href="/categories/EdTech/"><i class="fa-fw fas fa-folder-open"></i><span> EdTech</span></a></li><li><a class="site-page" href="/categories/HRTech/"><i class="fa-fw fas fa-folder-open"></i><span> HRTech</span></a></li><li><a class="site-page" href="/categories/Community/"><i class="fa-fw fas fa-folder-open"></i><span> Community</span></a></li><li><a class="site-page" href="/categories/product-design/"><i class="fa-fw fas fa-folder-open"></i><span> Product Design</span></a></li><li><a class="site-page" href="/categories/Project-Operation/"><i class="fa-fw fas fa-folder-open"></i><span> Project management</span></a></li><li><a class="site-page" href="/categories/Human-Resources/"><i class="fa-fw fas fa-folder-open"></i><span> Human resource develop</span></a></li><li><a class="site-page" href="/./"><i class="fa-fw fas fa-link"></i><span> …………</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.sb-hrbp.com/"><i class="fa-fw fas fa-link"></i><span> Human Resource Business Partner</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.sb-hrms.com/"><i class="fa-fw fas fa-link"></i><span> Human Resource Management System</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Library</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/Library/"><i class="fa-fw fas fa-folder-open"></i><span> Library</span></a></li><li><a class="site-page" href="/./"><i class="fa-fw fas fa-link"></i><span> …………</span></a></li><li><a class="site-page" href="/categories/Offer/"><i class="fa-fw fas fa-folder-open"></i><span> Offer</span></a></li><li><a class="site-page" href="/categories/Certificate/"><i class="fa-fw fas fa-folder-open"></i><span> Certificate</span></a></li><li><a class="site-page" href="/categories/Code/"><i class="fa-fw fas fa-folder-open"></i><span> Code</span></a></li><li><a class="site-page" href="/categories/Media/"><i class="fa-fw fas fa-folder-open"></i><span> Media</span></a></li><li><a class="site-page" href="/categories/Dict/"><i class="fa-fw fas fa-folder-open"></i><span> Dict</span></a></li><li><a class="site-page" href="/categories/Material/"><i class="fa-fw fas fa-folder-open"></i><span> Material</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/assets/img/top/3.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Sun Shubin(Memoirs)</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> About</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/about/"><i class="fa-fw fas fa-link"></i><span> About</span></a></li><li><a class="site-page" href="/policy/"><i class="fa-fw fas fa-link"></i><span> Policy</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Global News</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/america/"><i class="fa-fw fas fa-folder-open"></i><span> America</span></a></li><li><a class="site-page" href="/categories/china/"><i class="fa-fw fas fa-folder-open"></i><span> China</span></a></li><li><a class="site-page" href="/categories/japan/"><i class="fa-fw fas fa-folder-open"></i><span> Japan</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Publication</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/salesforce/"><i class="fa-fw fas fa-folder-open"></i><span> Salesforce从入门到项目实践</span></a></li><li><a class="site-page" href="/categories/rpa/"><i class="fa-fw fas fa-folder-open"></i><span> RPA从入门到项目实践</span></a></li><li><a class="site-page" href="/categories/pjm/"><i class="fa-fw fas fa-folder-open"></i><span> 项目管理从入门到项目实践</span></a></li><li><a class="site-page" href="/categories/pdm/"><i class="fa-fw fas fa-folder-open"></i><span> 产品经理从入门到项目实践</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Service</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/business-consulting/"><i class="fa-fw fas fa-folder-open"></i><span> Business Consulting</span></a></li><li><a class="site-page" href="/categories/career-consulting/"><i class="fa-fw fas fa-folder-open"></i><span> Career Consulting</span></a></li><li><a class="site-page" href="/experience-training/"><i class="fa-fw fas fa-folder-open"></i><span> Experience Training</span></a></li><li><a class="site-page" href="/./"><i class="fa-fw fas fa-link"></i><span> …………</span></a></li><li><a class="site-page" href="/categories/Business-Map/"><i class="fa-fw fas fa-folder-open"></i><span> Business map</span></a></li><li><a class="site-page" href="/categories/Healthcare/"><i class="fa-fw fas fa-folder-open"></i><span> Healthcare</span></a></li><li><a class="site-page" href="/categories/EdTech/"><i class="fa-fw fas fa-folder-open"></i><span> EdTech</span></a></li><li><a class="site-page" href="/categories/HRTech/"><i class="fa-fw fas fa-folder-open"></i><span> HRTech</span></a></li><li><a class="site-page" href="/categories/Community/"><i class="fa-fw fas fa-folder-open"></i><span> Community</span></a></li><li><a class="site-page" href="/categories/product-design/"><i class="fa-fw fas fa-folder-open"></i><span> Product Design</span></a></li><li><a class="site-page" href="/categories/Project-Operation/"><i class="fa-fw fas fa-folder-open"></i><span> Project management</span></a></li><li><a class="site-page" href="/categories/Human-Resources/"><i class="fa-fw fas fa-folder-open"></i><span> Human resource develop</span></a></li><li><a class="site-page" href="/./"><i class="fa-fw fas fa-link"></i><span> …………</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.sb-hrbp.com/"><i class="fa-fw fas fa-link"></i><span> Human Resource Business Partner</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.sb-hrms.com/"><i class="fa-fw fas fa-link"></i><span> Human Resource Management System</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Library</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/Library/"><i class="fa-fw fas fa-folder-open"></i><span> Library</span></a></li><li><a class="site-page" href="/./"><i class="fa-fw fas fa-link"></i><span> …………</span></a></li><li><a class="site-page" href="/categories/Offer/"><i class="fa-fw fas fa-folder-open"></i><span> Offer</span></a></li><li><a class="site-page" href="/categories/Certificate/"><i class="fa-fw fas fa-folder-open"></i><span> Certificate</span></a></li><li><a class="site-page" href="/categories/Code/"><i class="fa-fw fas fa-folder-open"></i><span> Code</span></a></li><li><a class="site-page" href="/categories/Media/"><i class="fa-fw fas fa-folder-open"></i><span> Media</span></a></li><li><a class="site-page" href="/categories/Dict/"><i class="fa-fw fas fa-folder-open"></i><span> Dict</span></a></li><li><a class="site-page" href="/categories/Material/"><i class="fa-fw fas fa-folder-open"></i><span> Material</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">UiPath Level 1-Lesson 2. Variables &amp; Data Types Introduction</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-13T09:18:58.000Z" title="发表于 2020-08-13 18:18:58">2020-08-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-18T09:58:58.000Z" title="更新于 2020-07-18 18:58:58">2020-07-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Business-Competence/">Business-Competence</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Business-Competence/RPAExcel-VBA-and-RPA/">RPAExcel VBA and RPA</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/">UiPath</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>学习大纲</strong></p>
+<ul>
+<li><p>  界面布局</p>
+</li>
+<li><p>  添加活动 (Activities)</p>
+</li>
+<li><p>  使用变量</p>
+</li>
+<li><p>  使用流程图 (Flowcharts) 或序列 (Sequences)</p>
+</li>
+</ul>
+<p> </p>
+<ol>
+<li>界面布局</li>
+</ol>
+<ul>
+<li><p>  Ribbon</p>
+</li>
+<li><p>  Activities</p>
+</li>
+<li><p>  Workflow Designer</p>
+</li>
+<li><p>  Properties</p>
+</li>
+</ul>
+<p> </p>
+<ol start="2">
+<li>FlowChart和Sequence</li>
+</ol>
+<ul>
+<li><p>  Sequence适用于需要执行几个连续动作的线性过程。</p>
+</li>
+<li><p>  FlowChart适用于为复杂的活动建立联系。</p>
+</li>
+<li><p>  FlowChart和Sequence可以互相嵌套。</p>
+</li>
+<li><p>  为FlowChart和Sequence命名，使程序的框架看上去更直观。</p>
+</li>
+</ul>
+<p> </p>
+<ol start="3">
+<li>变量</li>
+</ol>
+<p>变量用于存储多种类型的数据。变量的另一个关键方面是它们的值可以改变，以便您可以控制循环体执行的次数。</p>
+<p><strong>Scope</strong>表示变量的应用范围，比如变量仅在某一个特定的FlowChart中使用，或是能在整个项目中使用。即使在不同的Scope中使用，也需要使用不同的名称创建变量。</p>
+<ol>
+<li>常用变量：</li>
+</ol>
+<ul>
+<li><p>  Integer：整数 (1, 2, 3, 45345)</p>
+</li>
+<li><p>  String：字符串，通常用引号括起</p>
+</li>
+<li><p>  Boolean：布尔型，True或False</p>
+</li>
+<li><p>  Generic：存储任何类型的数据</p>
+</li>
+<li><p>Array of…：任何类型的同类数据的列，例如{1, 15, 36}; {strFirstName,<br>  StrMiddleName, strLastName}</p>
+</li>
+</ul>
+<ol start="2">
+<li>添加变量：</li>
+</ol>
+<ul>
+<li><p>从“设计”功能区选项卡添加：</p>
+<ul>
+<li>在“<strong>Design</strong>” Ribbion的“<strong>Variables</strong>”组中，选择“<strong>Create Variable</strong>”<br>  &gt; **[Type of Variable]**。将显示“Create Variable”窗口。</li>
+</ul>
+</li>
+<li><p>从右键菜单或使用快捷键Ctrl + K添加：</p>
+<ul>
+<li><p>在任何活动的“<strong>Properties</strong>”面板中，右键单击可以编辑的字段，然后在菜单中选择“<strong>Create<br>  Variable</strong>”，或按Ctrl + K。</p>
+</li>
+<li><p>填写名称并按Enter键。这种方式创建的变量的范围是它所属的最小范围。通过“<strong>Manage<br>  Variables</strong>” &gt; “<strong>Promote to Global Scope</strong>”<br>  以将所有变量都提升为全局变量。</p>
+</li>
+</ul>
+</li>
+</ul>
+<img src= "/img/loading.gif" data-lazy-src="/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath%20Level%201-Lesson%202.%20Variables%20&%20Data%20Types%20Introduction/a785b1d6d0a15299f04a5bd517797e1d.png" class="" title="变量">
+
+
+
+<ul>
+<li><p>从变量面板添加：</p>
+<ul>
+<li><p>  在Workflow Designer的下方可以调出变量面板。</p>
+</li>
+<li><p>变量名 Name：必填；变量类型 Type：必填；变量范围 Scope：必填；变量默认值<br>  Default：可选。</p>
+</li>
+<li><p>  在变量面板中修改变量名，将会应用到所有使用此变量的Activities或Workflow中。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p> 3) 删除变量：</p>
+<p>直接在变量面板中选中并按Delete键。</p>
+<ul>
+<li><p>删除所有在当前项目中<strong>未使用的变量</strong>：</p>
+<ul>
+<li><p>在“<strong>Design</strong>” Ribbion的“<strong>Variables</strong>”组中，选择“<strong>Manage Variables</strong>”<br>  <strong>&gt; <strong>“</strong>Remove Unreferenced</strong>”。</p>
+</li>
+<li><p>  变量面板中仅包含自动化过程中使用过的变量。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>浏览.Net变量类型</li>
+</ol>
+<p>搜索变量类型列表中不显示的类型： </p>
+<ul>
+<li><p>  在变量面板的变量类型下拉列表中，选择“<strong>Browse for Types</strong>”。</p>
+</li>
+<li><p>  在“<strong>Type Name</strong>”字段中键入要查找的变量类型的关键字，例如Excel。</p>
+</li>
+</ul>
+<ol start="4">
+<li>判断</li>
+</ol>
+<p>FlowChart：<strong>Flow Decision</strong></p>
+<p>Sequence：<strong>If</strong></p>
+<p>在Condition里添加判断条件，可以用And或Or连接。</p>
+<p> </p>
+<ol start="5">
+<li>循环</li>
+</ol>
+<p>FlowChart：直接将箭头指向之前的某个活动就可以构建循环。注意要给循环一个出口，否则就会死循环。</p>
+<img src= "/img/loading.gif" data-lazy-src="/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath%20Level%201-Lesson%202.%20Variables%20&%20Data%20Types%20Introduction/06eb029ede545dbc93da7ea9d62c9ca4.png" class="" title="循环">
+
+
+<p>Sequence：<strong>While，Do While，For Each</strong></p>
+<ul>
+<li><p>  While：先判断条件，如果符合条件则执行循环（条件在行动前）。</p>
+</li>
+<li><p>  Do While：先执行循环，再判断条件，符合条件则继续下一轮循环（条件在行动后）。</p>
+</li>
+<li><p>  For Each：对一个集合里的每个项目执行循环。</p>
+</li>
+</ul>
+<p>For Each 实例：</p>
+<ol>
+<li><p> Select Folder活动弹出窗口，要求用户选择一个文件夹。</p>
+</li>
+<li><p> 通过.NET代码Directory.GetFile()读取文件夹中的所有文件路径，并存入数组fileList中。</p>
+</li>
+<li><p>For<br> Each循环将数组fileList中的每一个元素（此例中是文件路径），并显示在Output窗口中。</p>
+</li>
+</ol>
+<img src= "/img/loading.gif" data-lazy-src="/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath%20Level%201-Lesson%202.%20Variables%20&%20Data%20Types%20Introduction/027b61e3e3fbe6e7f95c26a5e2771437.png" class="" title="For Each 实例">
+
+
+<ul>
+<li><p>For Each的属性TypeAgrument，用来选择每个项目(item)的数据类型。</p>
+<ul>
+<li>  Directory.GetFiles()是vb.NET语言，Uipath建立在.NET框架上的。</li>
+</ul>
+</li>
+</ul>
+<p>*按下Ctrl键可以选择多个活动。</p>
+<p>*<strong>GenericValue的连接：</strong>“123”+123=123123，123+”123”=246</p>
+<table>
+<thead>
+<tr>
+<th><strong>Generic Value 的方法</strong></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法名称</td>
+<td>数据类型</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>字符串型(String)</td>
+<td>整数型(Integer)</td>
+<td>小数型(Float)</td>
+<td>布尔型(Boolean)</td>
+</tr>
+<tr>
+<td><strong>Split</strong></td>
+<td>√</td>
+<td>自动转换为字符串型</td>
+<td>自动转换为字符串型</td>
+<td>自动转换为字符串： “Ture”或”False”</td>
+</tr>
+<tr>
+<td><strong>Replace</strong></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Substring</strong></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Length</strong></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Contains</strong></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trim</strong></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>IndexOf</strong></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ToUpper</strong></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ToLower</strong></td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ToInt</strong></td>
+<td>√</td>
+<td>√</td>
+<td>取下限</td>
+<td>True=1, False=0</td>
+</tr>
+<tr>
+<td><strong>ToString</strong></td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>“Ture”或”False”</td>
+</tr>
+</tbody></table>
+<p> </p>
+<p> </p>
+<p> </p>
+<ol start="6">
+<li>练习：猜数字</li>
+</ol>
+<p>生成一个0-1000的随机数让用户猜测。如果猜对了则提示并停止程序；如果猜错了，提示用户猜测的数字比正确答案大了还是小了，再继续猜测。</p>
+<p><strong>思路：</strong></p>
+<p>新建一个Flowchart→Assign：将生成的随机数赋值给变量rNum→Input<br>Dialog：输入猜测的数字并赋值给变量gNum，将Label属性设置为变量Hint用于显示提示→Flow<br>Decision：判断gNum是否等于rNum→是则显示Message Box→否则添加第二个Flow<br>Decision：gNum是否大于rNum→是则Assign：Hint赋值为“猜一个更小的数字”→否则Assign：Hint赋值为“猜一个更大的数字”→将两个Assign的箭头拖到Input<br>Dialog处建立循环。</p>
+<p>生成随机数：new Random().Next(0,1000)，可以直接谷歌关键词“.NET随机数”。</p>
+<p><strong>*本课使用过的活动、方法、函数等：</strong></p>
+<ul>
+<li><p>  <strong>Message Box</strong></p>
+</li>
+<li><p>  <strong>Assign</strong></p>
+</li>
+<li><p>  <strong>Input Dialog</strong></p>
+</li>
+<li><p>  <strong>Write Line</strong></p>
+</li>
+<li><p>  <strong>Excel Application Scope</strong>：设置路径时，如果文件不存在，会自动创建该文件。</p>
+</li>
+<li><p>  <strong>Write Cell</strong>：设置工作表名称时，如果工作表不存在，会自动创建工作表。</p>
+</li>
+<li><p>  <strong>Write Text File</strong></p>
+</li>
+<li><p>  <strong>Select Folder</strong></p>
+</li>
+<li><p>  <strong>Delay</strong>：Duration属性设置延迟的时间，如00:00:20表示延迟20秒钟。</p>
+</li>
+<li><p><strong>Switch</strong>：多条件判断，类似于VBA的Select<br>  Case。默认的Case值为整数型，可以在属性TypeArgument里修改。</p>
+</li>
+<li><p>  <strong>Break</strong>：只用于For Each循环。</p>
+</li>
+<li><p><strong>Open Application</strong>：可以用Indicate window on<br>  screen来抓取已经打开的程序，也可以在FileName属性里填写程序的路径。</p>
+</li>
+<li><p>  <strong>Attach Window</strong>：连接到已经打开的窗口并执行一系列活动。</p>
+</li>
+<li><p>  <strong>Type Into</strong></p>
+</li>
+<li><p>  <strong>Close Application</strong></p>
+</li>
+<li><p>  Now：返回项目执行时的日期和时间 (dd/MM/yyyy hh:mm:ss)</p>
+</li>
+<li><p>  .Substring(0,1)：返回字符串的第一个字母。</p>
+</li>
+<li><p>  .ToString：将数据转化为字符串类型。</p>
+</li>
+<li><p>  .Subtract()：减去括号内的值。</p>
+</li>
+<li><p>  new Random().Next(0,1000)：生成一个0到1000的随机整数。</p>
+</li>
+</ul>
+<br>
+
+<center>
+<b>加入万人职场社群，为自己的职业生涯保驾护航！</b>
+
+<br>
+
+ <img src= "/img/loading.gif" data-lazy-src="https://SB-HITECH.github.io/assets/img/dingding/dingding-group-excle-rpa.jpg" width = "350" height = "380" alt="万人知识共享社区" align=center />
+
+</center>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:sunshubin@outlook.jp">Shubin Sun</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://sunshubin.github.io/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath%20Level%201-Lesson%202.%20Variables%20&amp;%20Data%20Types%20Introduction/">https://sunshubin.github.io/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath Level 1-Lesson 2. Variables &amp; Data Types Introduction/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="/policy" target="_blank">Copyright  2018 SBHiTech</a> 许可协议。转载请注明来自 <a href="https://SunShubin.github.io" target="_blank">Sun Shubin(Memoirs)</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/UiPath-Level-1%E6%95%99%E7%A8%8B/">UiPath Level 1教程</a></div><div class="post_share"><div class="social-share" data-image="/assets/img/top/3.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> Donate</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/assets/img/WeChatPay.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/assets/img/WeChatPay.jpg" alt="Wechat pay"/></a><div class="post-qr-code-desc">Wechat pay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath%20Level%201-Lesson%201.%20Introduction%20to%20UiPath/"><img class="prev-cover" data-lazy-src="/assets/img/top/3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">UiPath Level 1-Lesson 1. Introduction to UiPath</div></div></a></div><div class="next-post pull-right"><a href="/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath%20Level%201-Lesson%203.%20Data%20Manipulation/"><img class="next-cover" data-lazy-src="/assets/img/top/6.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">UiPath Level 1-Lesson 3. Data Manipulation</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath Level 1-Lesson 1. Introduction to UiPath/" title="UiPath Level 1-Lesson 1. Introduction to UiPath"><img class="cover" data-lazy-src="/assets/img/top/3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-13</div><div class="title">UiPath Level 1-Lesson 1. Introduction to UiPath</div></div></a></div><div><a href="/zh-CN/Business-Competence/RPAExcel-VBA-and-RPA/UiPath/UiPath/UiPath Level 1-Lesson 3. Data Manipulation/" title="UiPath Level 1-Lesson 3. Data Manipulation"><img class="cover" data-lazy-src="/assets/img/top/6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-13</div><div class="title">UiPath Level 1-Lesson 3. Data Manipulation</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/assets/img/Portraits.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Shubin Sun</div><div class="author-info__description">诚信、睿智、勤奋、创新'</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">69</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">41</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">22</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/sunshubin"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://SunShubin.github.io" target="_blank" title="Homepage"><i class="fas fa-home"></i></a><a class="social-icon" href="https://www.linkedin.com/in/sunshubin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a><a class="social-icon" href="https://github.com/SunShubin" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:sunshubin@outlook.co.nz" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">本个人博客以中国及中国相关学习、生活、社交、工作等内容为主，点击顶部菜单可浏览其他国家内容的博客。<br>----更新于2021年1月1日</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/ja/Library/%E8%AA%AD%E6%9B%B8%E8%A8%88%E7%94%BB/" title="読書予定126本"><img data-lazy-src="/assets/img/top/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="読書予定126本"/></a><div class="content"><a class="title" href="/ja/Library/%E8%AA%AD%E6%9B%B8%E8%A8%88%E7%94%BB/" title="読書予定126本">読書予定126本</a><time datetime="2999-01-01T09:13:50.000Z" title="Created 2999-01-01 18:13:50">2999-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/zh-CN/Library/%E5%BE%AE%E4%BF%A1%E5%90%AC%E4%B9%A6%E8%AE%A1%E5%88%92/" title="微信听书计划229本"><img data-lazy-src="/assets/img/top/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微信听书计划229本"/></a><div class="content"><a class="title" href="/zh-CN/Library/%E5%BE%AE%E4%BF%A1%E5%90%AC%E4%B9%A6%E8%AE%A1%E5%88%92/" title="微信听书计划229本">微信听书计划229本</a><time datetime="2999-01-01T09:13:50.000Z" title="Created 2999-01-01 18:13:50">2999-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ja/Library/2021-11%E8%AA%AD%E6%9B%B8%E8%A8%98%E9%8C%B2/" title="2021 - 11　読書27本"><img data-lazy-src="/assets/img/top/8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2021 - 11　読書27本"/></a><div class="content"><a class="title" href="/ja/Library/2021-11%E8%AA%AD%E6%9B%B8%E8%A8%98%E9%8C%B2/" title="2021 - 11　読書27本">2021 - 11　読書27本</a><time datetime="2021-11-01T09:13:50.000Z" title="Created 2021-11-01 18:13:50">2021-11-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/zh-CN/Library/2021-11%E5%BE%AE%E4%BF%A1%E5%90%AC%E4%B9%A6%E8%A8%98%E9%8C%B2/" title="2021-11　微信听书20本"><img data-lazy-src="/assets/img/top/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2021-11　微信听书20本"/></a><div class="content"><a class="title" href="/zh-CN/Library/2021-11%E5%BE%AE%E4%BF%A1%E5%90%AC%E4%B9%A6%E8%A8%98%E9%8C%B2/" title="2021-11　微信听书20本">2021-11　微信听书20本</a><time datetime="2021-11-01T09:13:50.000Z" title="Created 2021-11-01 18:13:50">2021-11-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ja/%E6%8F%90%E6%A1%88%E6%96%87%E6%9B%B8/TransCosmos%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" title="TransCosmos＆大宇宙業務改善（最終更新：11月24日）"><img data-lazy-src="/assets/img/top/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TransCosmos＆大宇宙業務改善（最終更新：11月24日）"/></a><div class="content"><a class="title" href="/ja/%E6%8F%90%E6%A1%88%E6%96%87%E6%9B%B8/TransCosmos%E6%A5%AD%E5%8B%99%E6%94%B9%E5%96%84/" title="TransCosmos＆大宇宙業務改善（最終更新：11月24日）">TransCosmos＆大宇宙業務改善（最終更新：11月24日）</a><time datetime="2021-10-28T09:13:50.000Z" title="Created 2021-10-28 18:13:50">2021-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ja/DX-Community/AI/" title="AI"><img data-lazy-src="/assets/img/top/4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI"/></a><div class="content"><a class="title" href="/ja/DX-Community/AI/" title="AI">AI</a><time datetime="2021-10-01T09:13:50.000Z" title="Created 2021-10-01 18:13:50">2021-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ja/DX-Community/DX%E6%A6%82%E8%A6%81/" title="DX概要"><img data-lazy-src="/assets/img/top/7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DX概要"/></a><div class="content"><a class="title" href="/ja/DX-Community/DX%E6%A6%82%E8%A6%81/" title="DX概要">DX概要</a><time datetime="2021-10-01T09:13:50.000Z" title="Created 2021-10-01 18:13:50">2021-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ja/DX-Community/GIGA%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB/" title="GIGAスクール"><img data-lazy-src="/assets/img/top/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GIGAスクール"/></a><div class="content"><a class="title" href="/ja/DX-Community/GIGA%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB/" title="GIGAスクール">GIGAスクール</a><time datetime="2021-10-01T09:13:50.000Z" title="Created 2021-10-01 18:13:50">2021-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ja/DX-Community/IT%E3%83%A2%E3%83%80%E3%83%8A%E3%82%A4%E3%82%BC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%9F%BA%E6%9C%AC/" title="ITモダナイゼーション基本"><img data-lazy-src="/assets/img/top/4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ITモダナイゼーション基本"/></a><div class="content"><a class="title" href="/ja/DX-Community/IT%E3%83%A2%E3%83%80%E3%83%8A%E3%82%A4%E3%82%BC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%9F%BA%E6%9C%AC/" title="ITモダナイゼーション基本">ITモダナイゼーション基本</a><time datetime="2021-10-01T09:13:50.000Z" title="Created 2021-10-01 18:13:50">2021-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/ja/DX-Community/IoT/" title="IoT"><img data-lazy-src="/assets/img/top/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IoT"/></a><div class="content"><a class="title" href="/ja/DX-Community/IoT/" title="IoT">IoT</a><time datetime="2021-10-01T09:13:50.000Z" title="Created 2021-10-01 18:13:50">2021-10-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2021 By Shubin Sun</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="mailto:info@sb-hrbp.com">不良信息举报 Complaint Center：info@sb-hrbp.com</A></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
