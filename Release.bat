@@ -17,6 +17,7 @@ rmdir S:\HP-Release\Home\docs /s
 
 pause
 
-xcopy S:\HP-compiling\pelican\test\output S:\HP-Release\Home\docs /E /F
+xcopy S:\HP-compiling\pelican\test\output\  S:\HP-Release\Home\docs\ /E /F
+copy S:\HP-Release\Home\CNAME S:\HP-Release\Home\docs\CNAME 
 
 pause
