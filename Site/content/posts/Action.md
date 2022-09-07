@@ -1,6 +1,6 @@
 Title: Action
 Author: SBTech
-Date: 2022-9-6 11:37
+Date: 2022-9-8 11:37
 Modified: 2022-08-01 11:37
 Category: お知らせ
 Tags: Library,日程調整
@@ -81,6 +81,10 @@ keywords: スケジュール,Action
   
 # ２０２２年９月
 ## 2022/9/7
+
+<https://sunshubin.sb-hrms.com/>
+履歴書更新済み
+
 <https://Library.sb-hrbp.com>  
 日本の国会議員  
 
