@@ -69,32 +69,31 @@ MOT:Moments of truth|<https://mot.sb-hrbp.com>|---|未作成
 
 
 ## Core Competence
-Site Name | Site Url|Memo
+  
+Site Name | Site Url|Reference Url|Memo
 :--|:--|:--
-Product manager|<https://PdM.sb-hrbp.com>|未作成
-Project manager|<https://PjM.sb-hrbp.com>|未作成
-Business consulting|<https://bc.sb-hrbp.com>|---
-Career consulting|<https://cc.sb-hrbp.com>|---
-Experience training|<https://et.sb-hrbp.com>|---
----|---|---
+Product manager|<https://PdM.sb-hrbp.com>|---|未作成
+Project manager|<https://PjM.sb-hrbp.com>|---|未作成
+Business consulting|<https://bc.sb-hrbp.com>|---|---
+Career consulting|<https://cc.sb-hrbp.com>|---|---
+Experience training|<https://et.sb-hrbp.com>|---|---
+---|---|---|---
 
 
-
+  
 ## Experience as a Competence
 ### Business skill 
 Site Name | Site Url|Memo
 :--|:--|:--
+Presentation|---|---
+Communication|---|听、说、谈判（说服力）
 ---|---|---
----|---|---
-
 
 ### Tools
+  
+<https://tools.sb-hrbp.com/>
 
-Site Name | Site Url|Memo
-:--|:--|:--
-Tools|<https://tools.sb-hrbp.com/>|---
----|---|---
-
+  
 ## Information as a Competence
 
 Site Name | Site Url|Memo
@@ -118,9 +117,9 @@ Africa|<https://Africa.sb-hrbp.com>|---
 Site Name | Site Url|Reference Url|Memo
 :--|:--|:--|:--
 Country|<https://Country.sb-hrbp.com>|---|国家の基本知識
-Parliament|<https://Parliament.sb-hrbp.com>|<https://github.com/SB-Country/Parliament>|国会（人権・憲法）
-Government|<https://Government.sb-hrbp.com>|<https://github.com/SB-Country/Government>|政府（行政・施策）GaaS:Government as a Service
-Court|<https://Court.sb-hrbp.com>|<https://github.com/SB-Country/Court>|裁判（法律・司法）
+Parliament|<https://Parliament.sb-hrbp.com>|<https://github.com/SB-Country/Parliament/tree/main/Site/content/posts>|国会（人権・憲法）
+Government|<https://Government.sb-hrbp.com>|<https://github.com/SB-Country/Government/tree/main/Site/content/posts>|政府（行政・施策）GaaS:Government as a Service
+Court|<https://Court.sb-hrbp.com>|<https://github.com/SB-Country/Court/tree/main/Site/content/posts>|裁判（法律・司法）
 ---|---|---|---
 
 
@@ -128,14 +127,19 @@ Court|<https://Court.sb-hrbp.com>|<https://github.com/SB-Country/Court>|裁判�
 Site Name | Site Url|Memo|
 :--|:--|:--
 ---|---|---
+Food|---|---
+Offshore|---|---
+Smart City|---|---
+Supply|---|---
+Retail|---|---
+DX|---|---
 ---|---|---
 ---|---|---
 ---|---|---
----|---|---
----|---|---
-
 
 ### IDSS
+人工智能辅助决策系统  
+  
 
 Site Name | Site Url|Memo
 :--|:--|:--
@@ -192,11 +196,11 @@ Site Name | Site Url|Memo
 
 
 ## Guide
-
+  
 
 Guide : <https://Library.sb-hrbp.com>
 
-
+  
 ## USA
   
 Site Name | Site Url|Memo
@@ -207,8 +211,6 @@ Site Name | Site Url|Memo
 
 
 ## China
-
-
 
 
 中国图书馆分类法
